@@ -12,6 +12,7 @@ ENV PUB_HOSTED_URL=https://pub.flutter-io.cn
 ENV FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 RUN git clone -b dev https://github.com/flutter/flutter.git
 ENV PATH="$PWD/flutter/bin:$PATH"
-RUN ls
+RUN go version
+RUN flutter --version
 RUN flutter doctor
 RUN go get -u github.com/go-flutter-desktop/hover
