@@ -20,3 +20,5 @@ RUN flutter doctor
 RUN apt install -y libgl1-mesa-dev xorg-dev
 
 RUN go get -u github.com/go-flutter-desktop/hover
+
+RUN apt install -y zip
