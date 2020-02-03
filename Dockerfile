@@ -1,6 +1,6 @@
 FROM golang
 RUN apt update
-RUN apt install unzip
+RUN apt install -y unzip
 # ARG http_proxy=socks5://dev.star:1080
 # ARG https_proxy=socks5://dev.star:1080
 ENV GOPROXY=https://goproxy.io
@@ -17,6 +17,6 @@ RUN flutter --version
 RUN flutter doctor
 
 # Install Hover dependencies
-RUN apt install libgl1-mesa-dev xorg-dev
+RUN apt install -y libgl1-mesa-dev xorg-dev
 
 RUN go get -u github.com/go-flutter-desktop/hover
