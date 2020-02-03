@@ -15,4 +15,8 @@ ENV PATH="$PWD/flutter/bin:$PATH"
 RUN go version
 RUN flutter --version
 RUN flutter doctor
+
+# Install Hover dependencies
+RUN apt install libgl1-mesa-dev xorg-dev
+
 RUN go get -u github.com/go-flutter-desktop/hover
